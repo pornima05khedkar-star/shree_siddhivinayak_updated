@@ -30,7 +30,7 @@ const ContactSchema = new mongoose.Schema({
 const Contact = mongoose.model("Contact", ContactSchema);
 
 // Routes
-app.post("/contact", async (req, res) => {
+app.post("/", async (req, res) => {
     try {
         const { name, email, message } = req.body;
         if (!name || !email || !message)
@@ -43,11 +43,12 @@ app.post("/contact", async (req, res) => {
     } catch (err) {
         console.error("Error:", err);
         res.status(500).json({ error: "Server error" });
-    }
-});
-
+    }      
+});       
+ 
 // Start Server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () =>
-    console.log(`🚀 Server running on http://localhost:${PORT}`)
+    console.log(`🚀 website  running on http://127.0.0.1:3000/shree_siddhivinayak/Frontend/index.html`)
 );
+ 
