@@ -30,7 +30,8 @@ const ContactSchema = new mongoose.Schema({
 const Contact = mongoose.model("Contact", ContactSchema);
 
 // Routes
-app.post("/", async (req, res) => {
+// Routes
+app.post("/contact", async (req, res) => {
     try {
         const { name, email, message } = req.body;
         if (!name || !email || !message)
